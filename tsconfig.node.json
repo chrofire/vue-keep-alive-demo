@@ -12,6 +12,7 @@
         "noEmit": true
     },
     "include": [
-        "vite.config.*"
+        "vite.config.*",
+        "vitePlugins/**/*"
     ]
 }

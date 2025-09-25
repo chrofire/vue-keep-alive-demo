@@ -10,6 +10,7 @@ import Components from 'unplugin-vue-components/vite'
 import type { UserConfig } from 'vite'
 import { defineConfig, loadEnv } from 'vite'
 import Inspect from 'vite-plugin-inspect'
+import { spa404Plugin } from './vitePlugins/spa404Plugin'
 
 // https://cn.vite.dev/config/
 export default defineConfig(({ mode }) => {
@@ -44,7 +45,8 @@ export default defineConfig(({ mode }) => {
                 // sass
                 useSource: true
             }),
-            Inspect()
+            Inspect(),
+            spa404Plugin()
         ],
         resolve: {
             alias: {
