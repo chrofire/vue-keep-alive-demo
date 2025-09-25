@@ -1,0 +1,39 @@
+{
+    // 启用文件嵌套
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "tsconfig.json": "tsconfig.*.json, env.d.ts",
+        "vite.config.*": "jsconfig*, vitest.config.*",
+        "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .stylelint*, stylelint*, .prettier*, prettier*, .editorconfig, .npmrc, .node-version, commitlint*"
+    },
+
+    // 自动修复
+    "editor.codeActionsOnSave": {
+        // 显式保存时 触发 fix 操作
+        "source.fixAll.eslint": "explicit",
+        // 不在文件保存时运行 "整理 import 语句" 操作
+        "source.organizeImports": "never"
+    },
+
+    // 静默 IDE 中的样式规则警告, 但仍然自动修复它们
+    "eslint.rules.customizations": [
+        // { "rule": "style/*", "severity": "off" },
+    ],
+
+    // 启用 eslint 的语言
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "html",
+        "markdown",
+        "json",
+        "jsonc",
+        "yaml"
+    ],
+
+    // 指定用于 TypeScript IntelliSense 的 tsserver 和 lib*.d.ts 文件的文件夹路径
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}

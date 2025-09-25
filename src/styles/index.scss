@@ -1,0 +1,20 @@
+@use '@/styles/ui-init.scss' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --top-bar-height: 60px;
+    --top-bar-bg-color: #eee;
+    --side-bar-width: 240px;
+    --side-bar-border-color: #eee;
+    --tag-bar-height: 35px;
+}

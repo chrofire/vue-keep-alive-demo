@@ -1,0 +1,44 @@
+@mixin menu-item-line {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 0;
+        transition: all 0.3s;
+    }
+}
+
+@mixin menu-item-line-active {
+    &::before {
+        width: var(--active-menu-border-width);
+        height: 100%;
+        top: 0;
+        background-color: var(--el-color-primary);
+    }
+}
+
+@mixin tag-item-line {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        left: 50%;
+        bottom: 0;
+        background-color: transparent;
+        transition: all 0.3s;
+    }
+}
+
+@mixin tag-item-line-active {
+    &::before {
+        width: 100%;
+        height: 3px;
+        left: 0;
+        background-color: var(--el-color-primary);
+    }
+}
